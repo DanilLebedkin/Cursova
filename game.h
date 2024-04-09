@@ -10,8 +10,8 @@ public:
     Game();
     static void fillingBoard();
     static char&  getBoardCell(int,int);
-    bool checkWin(Player*);
-    bool checkDraw(Player*,Player*);
+   static bool checkWin(Player*);
+    static bool checkDraw(Player*,Player*);
 };
 
 #endif // GAME_H

@@ -17,7 +17,7 @@ char& Game::getBoardCell(int row,int collumn)
     return board[row][collumn];
 }
 
-bool Game::checkWin(Player *_player)
+bool Game::checkWin(Player* _player)
 {
     if(board[0][0]==_player->getSign() && board[1][1]==_player->getSign() && board[2][2]==_player->getSign()) return true;
     if(board[2][0]==_player->getSign() && board[1][1]==_player->getSign() && board[0][2]==_player->getSign()) return true;

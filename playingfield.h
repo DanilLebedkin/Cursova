@@ -4,8 +4,11 @@
 #include <QDialog>
 #include"game.h"
 #include"humanplayer.h"
+#include"player.h"
 #include"aiplayer.h"
-#include<qvector.h> >
+#include"winordrawwindow.h"
+#include<qvector.h>
+#include<QPushButton>
 namespace Ui {
 class playingField;
 }
@@ -17,10 +20,10 @@ class playingField : public QDialog
 public:
     explicit playingField(QWidget *parent = nullptr);
     ~playingField();
-    void setHumanPlayer(HumanPlayer);
-    void setAiPlayer(AiPlayer);
+    void setHumanPlayer(HumanPlayer _humanPlayer);
+    void setAiPlayer(AiPlayer _aiPlayer);
     void fillingVectorOfButtons();
-   static QVector<QPushButton*>getButtons();
+    static QVector<QPushButton*>& getButtons();
 private slots:
     void on_field1_2_clicked();
 

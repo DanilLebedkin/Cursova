@@ -18,3 +18,9 @@ void MainMenu::on_newGameBtn_clicked()
     selector.exec();
 }
 
+
+void MainMenu::on_ExitBtn_clicked()
+{
+    MainMenu::close();
+}
+

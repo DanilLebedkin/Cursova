@@ -1,7 +1,9 @@
 #ifndef AIPLAYER_H
 #define AIPLAYER_H
 #include"player.h"
-class AiPlayer:Player
+#include"game.h"
+#include"playingfield.h"
+class AiPlayer: public Player
 {
 private:
     char sign;
@@ -13,6 +15,7 @@ public:
     int generateMove();
     void aiTurn();
     void changeButtonName(int);
+    int buttonSelector(int,int);
 
 };
 

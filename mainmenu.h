@@ -20,6 +20,8 @@ public:
 private slots:
     void on_newGameBtn_clicked();
 
+    void on_ExitBtn_clicked();
+
 private:
     Ui::MainMenu *ui;
 };
