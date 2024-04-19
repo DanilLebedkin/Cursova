@@ -2,7 +2,7 @@
 #define AIPLAYER_H
 #include"player.h"
 #include"game.h"
-#include"playingfield.h"
+
 class AiPlayer: public Player
 {
 private:

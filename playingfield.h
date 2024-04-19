@@ -4,7 +4,6 @@
 #include <QDialog>
 #include"game.h"
 #include"humanplayer.h"
-#include"player.h"
 #include"aiplayer.h"
 #include"winordrawwindow.h"
 #include<qvector.h>

@@ -1,7 +1,7 @@
 #include "aiplayer.h"
 #include<time.h>
 #include<stdlib.h>
-
+#include"playingfield.h"
 AiPlayer::AiPlayer(char _sign):Player(_sign) {sign=_sign;}
 
 void AiPlayer::setSign(char _sign)
@@ -17,22 +17,24 @@ char AiPlayer::getSign()
 void AiPlayer::makeTurn(int row, int collumn)
 {
     int numberOfButton=buttonSelector(row,collumn);
-    Game::getBoardCell(row,collumn)=getSign();
+    Game::setBoardCell(row-1,collumn-1,getSign());
     changeButtonName(numberOfButton);
 }
 
 int AiPlayer::generateMove()
 {
     srand(time(NULL));
-    return 1+rand()%9;
+    return 1+rand()%3;
 }
 
 void AiPlayer::aiTurn()
 {
+    bool resultOfCheckBusy;
     int row=AiPlayer::generateMove();
     int collumn=AiPlayer::generateMove();
-    if(!Player::isBusy(row,collumn)) return AiPlayer::makeTurn(row,collumn);
-    return aiTurn();
+    resultOfCheckBusy=Player::isBusy(row,collumn);
+    if(!resultOfCheckBusy) return AiPlayer::makeTurn(row,collumn);
+    else return aiTurn();
 }
 
 void AiPlayer::changeButtonName(int numberOfButton)

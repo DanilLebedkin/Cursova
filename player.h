@@ -9,7 +9,7 @@ public:
     Player(char _sign);
     void virtual makeTurn(int,int)=0;
     char virtual getSign()=0;
-    bool isBusy(int,int);
+    static bool isBusy(int,int);
     void changeButtonName(int);
 };
 

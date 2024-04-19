@@ -17,12 +17,13 @@ void signselection::on_crossBtn_clicked()
 {
     HumanPlayer human('1');
     AiPlayer ai('1');
-    human.setSign('+');
+    human.setSign('X');
     ai.setSign('0');
-    playingField playField;
-    playField.setHumanPlayer(human);
-    playField.setAiPlayer(ai);
-    playField.exec();
+    playingField*playField = new playingField;
+    playField->setHumanPlayer(human);
+    playField->setAiPlayer(ai);
+    playField->show();
+    this->close();
 }
 
 
@@ -31,10 +32,10 @@ void signselection::on_nullBtn_clicked()
     HumanPlayer human('1');
     AiPlayer ai('1');
     human.setSign('0');
-    ai.setSign('+');
-    playingField playField;
-    playField.setHumanPlayer(human);
-    playField.setAiPlayer(ai);
-    playField.exec();
+    ai.setSign('X');
+     playingField*playField = new playingField;
+    playField->setHumanPlayer(human);
+     playField->setAiPlayer(ai);
+    playField->show();
 }
 

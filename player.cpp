@@ -4,8 +4,11 @@ Player::Player(char _sign):sign(_sign) {}
 
 bool Player::isBusy(int row,int collumn)
 {
-    if(Game::getBoardCell(row,collumn)!='1') return false;
-    return true;
+    row--;
+    collumn--;
+    char boardCellValue=Game::getBoardCell(row,collumn);
+    if(boardCellValue=='1') return false;
+    else return true;
 }
 
 

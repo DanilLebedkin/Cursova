@@ -14,5 +14,5 @@ void HumanPlayer::setSign(char _sign)
 
 void HumanPlayer::makeTurn(int row,int collumn)
 {
-    Game::getBoardCell(row,collumn)=getSign();
+    Game::setBoardCell(row-1,collumn-1,getSign());
 }
