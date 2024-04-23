@@ -353,10 +353,10 @@ void playingField::on_field3_3_clicked()
         winDrawWind->setModal(true);
         QChar sign=humanPlayer.getSign();
         humanPlayer.makeTurn(3,3);
-        resultOfCheckWin=Game::checkWin(&aiPlayer);
+        resultOfCheckWin=Game::checkWin(&humanPlayer);
         if(resultOfCheckWin)
         {
-            winDrawWind->setLabelText("AI win!");
+            winDrawWind->setLabelText("You win!");
             winDrawWind->exec();
         }
         ui->field3_3->setText(sign);

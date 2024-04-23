@@ -1,5 +1,6 @@
 #include "aiplayer.h"
 #include<time.h>
+#include "windows.h"
 #include<stdlib.h>
 #include"playingfield.h"
 AiPlayer::AiPlayer(char _sign):Player(_sign) {sign=_sign;}
@@ -24,13 +25,15 @@ void AiPlayer::makeTurn(int row, int collumn)
 int AiPlayer::generateMove()
 {
     srand(time(NULL));
-    return 1+rand()%3;
+    int number=1+rand()%3;
+    return number;
 }
 
 void AiPlayer::aiTurn()
 {
     bool resultOfCheckBusy;
     int row=AiPlayer::generateMove();
+    Sleep(50);
     int collumn=AiPlayer::generateMove();
     resultOfCheckBusy=Player::isBusy(row,collumn);
     if(!resultOfCheckBusy) return AiPlayer::makeTurn(row,collumn);

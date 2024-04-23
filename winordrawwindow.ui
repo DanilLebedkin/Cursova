@@ -13,24 +13,34 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="gridLayoutWidget">
    <property name="geometry">
     <rect>
      <x>260</x>
-     <y>90</y>
-     <width>151</width>
-     <height>161</height>
+     <y>110</y>
+     <width>211</width>
+     <height>181</height>
     </rect>
    </property>
-   <layout class="QFormLayout" name="formLayout">
-    <item row="0" column="0">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
      <widget class="QLabel" name="labelForResultOfGame">
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
     </item>
-    <item row="1" column="0">
+    <item row="2" column="0">
      <widget class="QPushButton" name="returnToMainMenu">
       <property name="text">
        <string>Return to main menu</string>

@@ -33,9 +33,9 @@ void signselection::on_nullBtn_clicked()
     AiPlayer ai('1');
     human.setSign('0');
     ai.setSign('X');
-     playingField*playField = new playingField;
+    playingField*playField = new playingField;
     playField->setHumanPlayer(human);
-     playField->setAiPlayer(ai);
+    playField->setAiPlayer(ai);
     playField->show();
 }
 
