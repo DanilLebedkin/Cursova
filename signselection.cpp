@@ -37,5 +37,6 @@ void signselection::on_nullBtn_clicked()
     playField->setHumanPlayer(human);
     playField->setAiPlayer(ai);
     playField->show();
+    this->close();
 }
 

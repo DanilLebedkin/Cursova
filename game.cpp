@@ -7,14 +7,14 @@ void Game::initializationBoard()
 {
     board.resize(ROWS,QVector<char>(COLLUMNS,'1'));
 }
-// void Game::fillingBoard()
-// {
-//     for (int i = 0; i < ROWS-1; ++i) {
-//         for (int j = 0; j < COLLUMNS-1; ++j) {
-//             Game::setBoardCell(i,j,'1');
-//         }
-//     }
-// }
+void Game::fillingBoard()
+{
+    for (int i = 0; i < ROWS-1; ++i) {
+        for (int j = 0; j < COLLUMNS-1; ++j) {
+            Game::setBoardCell(i,j,'1');
+        }
+    }
+}
 
 char& Game::getBoardCell(int row,int collumn)
 {

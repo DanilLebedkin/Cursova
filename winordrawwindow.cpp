@@ -1,6 +1,6 @@
 #include "winordrawwindow.h"
 #include "ui_winordrawwindow.h"
-
+#include "game.h"
 winOrDrawWindow::winOrDrawWindow(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::winOrDrawWindow)
@@ -20,6 +20,6 @@ void winOrDrawWindow::setLabelText(QString message)
 
 void winOrDrawWindow::on_returnToMainMenu_clicked()
 {
-
+    this->close();
 }
 

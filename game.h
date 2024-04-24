@@ -9,6 +9,7 @@ private:
 public:
     Game();
     static void initializationBoard();
+    static void fillingBoard();
     static char&  getBoardCell(int,int);
     static void setBoardCell(int,int,char);
    static bool checkWin(Player*);

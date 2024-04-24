@@ -11,8 +11,7 @@ playingField::playingField(QWidget *parent)
     ui->setupUi(this);
     fillingVectorOfButtons();
     Game::initializationBoard();
-    //Game::fillingBoard();
-
+    Game::fillingBoard();
 }
 int counterOfPushedBtn=0;
 bool resultOfCheckBusy;
@@ -68,6 +67,7 @@ void playingField::on_field1_1_clicked()
         {
             winDrawWind->setLabelText("You win!");
             winDrawWind->exec();
+            this->close();
         }
         ui->field1_1->setText(sign);
         aiPlayer.aiTurn();
@@ -76,6 +76,7 @@ void playingField::on_field1_1_clicked()
         {
             winDrawWind->setLabelText("AI win!");
             winDrawWind->exec();
+            this->close();
         }
         if(counterOfPushedBtn==9)
         {
@@ -84,6 +85,7 @@ void playingField::on_field1_1_clicked()
             {
                 winDrawWind->setLabelText("Draw!");
                 winDrawWind->exec();
+                this->close();
             }
         }
         counterOfPushedBtn++;
@@ -104,6 +106,7 @@ void playingField::on_field1_2_clicked()
         {
             winDrawWind->setLabelText("You win!");
             winDrawWind->exec();
+            this->close();
         }
         ui->field1_2->setText(sign);
         aiPlayer.aiTurn();
@@ -112,6 +115,7 @@ void playingField::on_field1_2_clicked()
         {
             winDrawWind->setLabelText("AI win!");
             winDrawWind->exec();
+            this->close();
         }
         if(counterOfPushedBtn==9)
         {
@@ -120,6 +124,7 @@ void playingField::on_field1_2_clicked()
             {
                 winDrawWind->setLabelText("Draw!");
                 winDrawWind->exec();
+                this->close();
             }
         }
         counterOfPushedBtn++;
@@ -141,6 +146,7 @@ void playingField::on_field1_3_clicked()
         {
             winDrawWind->setLabelText("You win!");
             winDrawWind->exec();
+            this->close();
         }
         ui->field1_3->setText(sign);
         aiPlayer.aiTurn();
@@ -149,6 +155,7 @@ void playingField::on_field1_3_clicked()
         {
             winDrawWind->setLabelText("AI win!");
             winDrawWind->exec();
+            this->close();
         }
         if(counterOfPushedBtn==9)
         {
@@ -157,6 +164,7 @@ void playingField::on_field1_3_clicked()
             {
                 winDrawWind->setLabelText("Draw!");
                 winDrawWind->exec();
+                this->close();
             }
         }
         counterOfPushedBtn++;
@@ -177,6 +185,7 @@ void playingField::on_field2_1_clicked()
         {
             winDrawWind->setLabelText("You win!");
             winDrawWind->exec();
+            this->close();
         }
         ui->field2_1->setText(sign);
         aiPlayer.aiTurn();
@@ -185,6 +194,7 @@ void playingField::on_field2_1_clicked()
         {
             winDrawWind->setLabelText("AI win!");
             winDrawWind->exec();
+            this->close();
         }
         if(counterOfPushedBtn==9)
         {
@@ -193,6 +203,7 @@ void playingField::on_field2_1_clicked()
             {
                 winDrawWind->setLabelText("Draw!");
                 winDrawWind->exec();
+                this->close();
             }
         }
         counterOfPushedBtn++;
@@ -214,6 +225,7 @@ void playingField::on_field2_2_clicked()
         {
             winDrawWind->setLabelText("You win!");
             winDrawWind->exec();
+            this->close();
         }
         ui->field2_2->setText(sign);
         aiPlayer.aiTurn();
@@ -222,6 +234,7 @@ void playingField::on_field2_2_clicked()
         {
             winDrawWind->setLabelText("AI win!");
             winDrawWind->exec();
+            this->close();
         }
         if(counterOfPushedBtn==9)
         {
@@ -230,6 +243,7 @@ void playingField::on_field2_2_clicked()
             {
                 winDrawWind->setLabelText("Draw!");
                 winDrawWind->exec();
+                this->close();
             }
         }
         counterOfPushedBtn++;
@@ -251,6 +265,7 @@ void playingField::on_field2_3_clicked()
         {
             winDrawWind->setLabelText("You win!");
             winDrawWind->exec();
+            this->close();
         }
         ui->field2_3->setText(sign);
         aiPlayer.aiTurn();
@@ -259,6 +274,7 @@ void playingField::on_field2_3_clicked()
         {
             winDrawWind->setLabelText("AI win!");
             winDrawWind->exec();
+            this->close();
         }
         if(counterOfPushedBtn==9)
         {
@@ -267,6 +283,7 @@ void playingField::on_field2_3_clicked()
             {
                 winDrawWind->setLabelText("Draw!");
                 winDrawWind->exec();
+                this->close();
             }
         }
         counterOfPushedBtn++;
@@ -287,6 +304,7 @@ void playingField::on_field3_1_clicked()
         {
             winDrawWind->setLabelText("You win!");
             winDrawWind->exec();
+            this->close();
         }
         ui->field3_1->setText(sign);
         aiPlayer.aiTurn();
@@ -295,6 +313,7 @@ void playingField::on_field3_1_clicked()
         {
             winDrawWind->setLabelText("AI win!");
             winDrawWind->exec();
+            this->close();
         }
         if(counterOfPushedBtn==9)
         {
@@ -303,6 +322,7 @@ void playingField::on_field3_1_clicked()
             {
                 winDrawWind->setLabelText("Draw!");
                 winDrawWind->exec();
+                this->close();
             }
         }
         counterOfPushedBtn++;
@@ -322,6 +342,7 @@ void playingField::on_field3_2_clicked()
         {
             winDrawWind->setLabelText("You win!");
             winDrawWind->exec();
+            this->close();
         }
         ui->field3_2->setText(sign);
         aiPlayer.aiTurn();
@@ -330,6 +351,7 @@ void playingField::on_field3_2_clicked()
         {
             winDrawWind->setLabelText("AI win!");
             winDrawWind->exec();
+            this->close();
         }
         if(counterOfPushedBtn==9)
         {
@@ -338,6 +360,7 @@ void playingField::on_field3_2_clicked()
             {
                 winDrawWind->setLabelText("Draw!");
                 winDrawWind->exec();
+                this->close();
             }
         }
         counterOfPushedBtn++;
@@ -358,6 +381,7 @@ void playingField::on_field3_3_clicked()
         {
             winDrawWind->setLabelText("You win!");
             winDrawWind->exec();
+            this->close();
         }
         ui->field3_3->setText(sign);
         aiPlayer.aiTurn();
@@ -365,6 +389,7 @@ void playingField::on_field3_3_clicked()
         {
             winDrawWind->setLabelText("AI win!");
             winDrawWind->exec();
+            this->close();
         }
         if(counterOfPushedBtn==9)
         {
@@ -373,6 +398,7 @@ void playingField::on_field3_3_clicked()
             {
                 winDrawWind->setLabelText("Draw!");
                 winDrawWind->exec();
+                this->close();
             }
         }
         counterOfPushedBtn++;
