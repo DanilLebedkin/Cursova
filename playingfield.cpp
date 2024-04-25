@@ -62,21 +62,28 @@ void playingField::on_field1_1_clicked()
         winDrawWind->setModal(true);
         QChar sign=humanPlayer.getSign();
         humanPlayer.makeTurn(1,1);
+        ui->field1_1->setText(sign);
         resultOfCheckWin=Game::checkWin(&humanPlayer);
         if(resultOfCheckWin)
         {
             winDrawWind->setLabelText("You win!");
             winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
             this->close();
+            return;
         }
-        ui->field1_1->setText(sign);
+
         aiPlayer.aiTurn();
         resultOfCheckWin=Game::checkWin(&aiPlayer);
         if(resultOfCheckWin)
         {
             winDrawWind->setLabelText("AI win!");
             winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
             this->close();
+            return;
         }
         if(counterOfPushedBtn==9)
         {
@@ -85,7 +92,10 @@ void playingField::on_field1_1_clicked()
             {
                 winDrawWind->setLabelText("Draw!");
                 winDrawWind->exec();
+                Game::initializationBoard();
+                counterOfPushedBtn=0;
                 this->close();
+                return;
             }
         }
         counterOfPushedBtn++;
@@ -102,20 +112,27 @@ void playingField::on_field1_2_clicked()
         QChar sign=humanPlayer.getSign();
         humanPlayer.makeTurn(1,2);
         resultOfCheckWin=Game::checkWin(&humanPlayer);
+        ui->field1_2->setText(sign);
         if(resultOfCheckWin)
         {
             winDrawWind->setLabelText("You win!");
             winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
             this->close();
+            return;
         }
-        ui->field1_2->setText(sign);
+
         aiPlayer.aiTurn();
         resultOfCheckWin=Game::checkWin(&aiPlayer);
         if(resultOfCheckWin)
         {
             winDrawWind->setLabelText("AI win!");
             winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
             this->close();
+            return;
         }
         if(counterOfPushedBtn==9)
         {
@@ -124,7 +141,10 @@ void playingField::on_field1_2_clicked()
             {
                 winDrawWind->setLabelText("Draw!");
                 winDrawWind->exec();
+                Game::initializationBoard();
+                counterOfPushedBtn=0;
                 this->close();
+                return;
             }
         }
         counterOfPushedBtn++;
@@ -142,20 +162,27 @@ void playingField::on_field1_3_clicked()
         QChar sign=humanPlayer.getSign();
         humanPlayer.makeTurn(1,3);
         resultOfCheckWin=Game::checkWin(&humanPlayer);
+        ui->field1_3->setText(sign);
         if(resultOfCheckWin)
         {
             winDrawWind->setLabelText("You win!");
             winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
             this->close();
+            return;
         }
-        ui->field1_3->setText(sign);
+
         aiPlayer.aiTurn();
         resultOfCheckWin=Game::checkWin(&aiPlayer);
         if(resultOfCheckWin)
         {
             winDrawWind->setLabelText("AI win!");
             winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
             this->close();
+            return;
         }
         if(counterOfPushedBtn==9)
         {
@@ -164,7 +191,10 @@ void playingField::on_field1_3_clicked()
             {
                 winDrawWind->setLabelText("Draw!");
                 winDrawWind->exec();
+                Game::initializationBoard();
+                counterOfPushedBtn=0;
                 this->close();
+                return;
             }
         }
         counterOfPushedBtn++;
@@ -181,20 +211,27 @@ void playingField::on_field2_1_clicked()
         QChar sign=humanPlayer.getSign();
         humanPlayer.makeTurn(2,1);
         resultOfCheckWin=Game::checkWin(&humanPlayer);
+        ui->field2_1->setText(sign);
         if(resultOfCheckWin)
         {
             winDrawWind->setLabelText("You win!");
             winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
             this->close();
+            return;
         }
-        ui->field2_1->setText(sign);
+
         aiPlayer.aiTurn();
         resultOfCheckWin=Game::checkWin(&aiPlayer);
         if(resultOfCheckWin)
         {
             winDrawWind->setLabelText("AI win!");
             winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
             this->close();
+            return;
         }
         if(counterOfPushedBtn==9)
         {
@@ -203,7 +240,10 @@ void playingField::on_field2_1_clicked()
             {
                 winDrawWind->setLabelText("Draw!");
                 winDrawWind->exec();
+                Game::initializationBoard();
+                counterOfPushedBtn=0;
                 this->close();
+                return;
             }
         }
         counterOfPushedBtn++;
@@ -221,20 +261,27 @@ void playingField::on_field2_2_clicked()
         QChar sign=humanPlayer.getSign();
         humanPlayer.makeTurn(2,2);
         resultOfCheckWin=Game::checkWin(&humanPlayer);
+        ui->field2_2->setText(sign);
         if(resultOfCheckWin)
         {
             winDrawWind->setLabelText("You win!");
             winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
             this->close();
+            return;
         }
-        ui->field2_2->setText(sign);
+
         aiPlayer.aiTurn();
         resultOfCheckWin=Game::checkWin(&aiPlayer);
         if(resultOfCheckWin)
         {
             winDrawWind->setLabelText("AI win!");
             winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
             this->close();
+            return;
         }
         if(counterOfPushedBtn==9)
         {
@@ -243,7 +290,10 @@ void playingField::on_field2_2_clicked()
             {
                 winDrawWind->setLabelText("Draw!");
                 winDrawWind->exec();
+                Game::initializationBoard();
+                counterOfPushedBtn=0;
                 this->close();
+                return;
             }
         }
         counterOfPushedBtn++;
@@ -261,20 +311,27 @@ void playingField::on_field2_3_clicked()
         QChar sign=humanPlayer.getSign();
         humanPlayer.makeTurn(2,3);
         resultOfCheckWin=Game::checkWin(&humanPlayer);
+        ui->field2_3->setText(sign);
         if(resultOfCheckWin)
         {
             winDrawWind->setLabelText("You win!");
             winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
             this->close();
+            return;
         }
-        ui->field2_3->setText(sign);
+
         aiPlayer.aiTurn();
         resultOfCheckWin=Game::checkWin(&aiPlayer);
         if(resultOfCheckWin)
         {
             winDrawWind->setLabelText("AI win!");
             winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
             this->close();
+            return;
         }
         if(counterOfPushedBtn==9)
         {
@@ -283,7 +340,10 @@ void playingField::on_field2_3_clicked()
             {
                 winDrawWind->setLabelText("Draw!");
                 winDrawWind->exec();
+                Game::initializationBoard();
+                counterOfPushedBtn=0;
                 this->close();
+                return;
             }
         }
         counterOfPushedBtn++;
@@ -300,20 +360,27 @@ void playingField::on_field3_1_clicked()
         QChar sign=humanPlayer.getSign();
         humanPlayer.makeTurn(3,1);
         resultOfCheckWin=Game::checkWin(&humanPlayer);
+        ui->field3_1->setText(sign);
         if(resultOfCheckWin)
         {
             winDrawWind->setLabelText("You win!");
             winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
             this->close();
+            return;
         }
-        ui->field3_1->setText(sign);
+
         aiPlayer.aiTurn();
         resultOfCheckWin=Game::checkWin(&aiPlayer);
         if(resultOfCheckWin)
         {
             winDrawWind->setLabelText("AI win!");
             winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
             this->close();
+            return;
         }
         if(counterOfPushedBtn==9)
         {
@@ -322,7 +389,10 @@ void playingField::on_field3_1_clicked()
             {
                 winDrawWind->setLabelText("Draw!");
                 winDrawWind->exec();
+                Game::initializationBoard();
+                counterOfPushedBtn=0;
                 this->close();
+                return;
             }
         }
         counterOfPushedBtn++;
@@ -338,20 +408,27 @@ void playingField::on_field3_2_clicked()
         winDrawWind->setModal(true);
         QChar sign=humanPlayer.getSign();
         humanPlayer.makeTurn(3,2);
+        ui->field3_2->setText(sign);
         if(Game::checkWin(&humanPlayer))
         {
             winDrawWind->setLabelText("You win!");
             winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
             this->close();
+            return;
         }
-        ui->field3_2->setText(sign);
+
         aiPlayer.aiTurn();
         resultOfCheckWin=Game::checkWin(&aiPlayer);
         if(resultOfCheckWin)
         {
             winDrawWind->setLabelText("AI win!");
             winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
             this->close();
+            return;
         }
         if(counterOfPushedBtn==9)
         {
@@ -360,7 +437,10 @@ void playingField::on_field3_2_clicked()
             {
                 winDrawWind->setLabelText("Draw!");
                 winDrawWind->exec();
+                Game::initializationBoard();
+                counterOfPushedBtn=0;
                 this->close();
+                return;
             }
         }
         counterOfPushedBtn++;
@@ -377,19 +457,26 @@ void playingField::on_field3_3_clicked()
         QChar sign=humanPlayer.getSign();
         humanPlayer.makeTurn(3,3);
         resultOfCheckWin=Game::checkWin(&humanPlayer);
+        ui->field3_3->setText(sign);
         if(resultOfCheckWin)
         {
             winDrawWind->setLabelText("You win!");
             winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
             this->close();
+            return;
         }
-        ui->field3_3->setText(sign);
+
         aiPlayer.aiTurn();
         if(Game::checkWin(&aiPlayer))
         {
             winDrawWind->setLabelText("AI win!");
             winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
             this->close();
+            return;
         }
         if(counterOfPushedBtn==9)
         {
@@ -398,7 +485,10 @@ void playingField::on_field3_3_clicked()
             {
                 winDrawWind->setLabelText("Draw!");
                 winDrawWind->exec();
+                Game::initializationBoard();
+                counterOfPushedBtn=0;
                 this->close();
+                return;
             }
         }
         counterOfPushedBtn++;
