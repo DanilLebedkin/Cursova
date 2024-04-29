@@ -9,9 +9,9 @@ playingField::playingField(QWidget *parent)
     ,aiPlayer('1')
 {
     ui->setupUi(this);
+    this->setWindowTitle("Playing field");
     fillingVectorOfButtons();
     Game::initializationBoard();
-    Game::fillingBoard();
 }
 int counterOfPushedBtn=0;
 bool resultOfCheckBusy;
@@ -55,6 +55,7 @@ QVector<QPushButton *>& playingField::getButtons()
 
 void playingField::on_field1_1_clicked()
 {
+    counterOfPushedBtn++;
     resultOfCheckBusy=Player::isBusy(1,1);
     if(resultOfCheckBusy)  QMessageBox::about(this, "Вибачте, але Ви вибрали зайняте поле", "Будь ласка виберіть не зайняте поле");
     else{
@@ -73,18 +74,6 @@ void playingField::on_field1_1_clicked()
             this->close();
             return;
         }
-
-        aiPlayer.aiTurn();
-        resultOfCheckWin=Game::checkWin(&aiPlayer);
-        if(resultOfCheckWin)
-        {
-            winDrawWind->setLabelText("AI win!");
-            winDrawWind->exec();
-            Game::initializationBoard();
-            counterOfPushedBtn=0;
-            this->close();
-            return;
-        }
         if(counterOfPushedBtn==9)
         {
             resultOfCheckDraw=Game::checkDraw(&humanPlayer,&aiPlayer);
@@ -98,12 +87,24 @@ void playingField::on_field1_1_clicked()
                 return;
             }
         }
+        aiPlayer.aiTurn();
         counterOfPushedBtn++;
+        resultOfCheckWin=Game::checkWin(&aiPlayer);
+        if(resultOfCheckWin)
+        {
+            winDrawWind->setLabelText("AI win!");
+            winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
+            this->close();
+            return;
+        }
     }
 }
 
 void playingField::on_field1_2_clicked()
 {
+    counterOfPushedBtn++;
     resultOfCheckBusy=Player::isBusy(1,2);
     if(resultOfCheckBusy)  QMessageBox::about(this, "Вибачте, але Ви вибрали зайняте поле", "Будь ласка виберіть не зайняте поле");
     else{
@@ -122,18 +123,6 @@ void playingField::on_field1_2_clicked()
             this->close();
             return;
         }
-
-        aiPlayer.aiTurn();
-        resultOfCheckWin=Game::checkWin(&aiPlayer);
-        if(resultOfCheckWin)
-        {
-            winDrawWind->setLabelText("AI win!");
-            winDrawWind->exec();
-            Game::initializationBoard();
-            counterOfPushedBtn=0;
-            this->close();
-            return;
-        }
         if(counterOfPushedBtn==9)
         {
             resultOfCheckDraw=Game::checkDraw(&humanPlayer,&aiPlayer);
@@ -147,13 +136,26 @@ void playingField::on_field1_2_clicked()
                 return;
             }
         }
+
+        aiPlayer.aiTurn();
         counterOfPushedBtn++;
+        resultOfCheckWin=Game::checkWin(&aiPlayer);
+        if(resultOfCheckWin)
+        {
+            winDrawWind->setLabelText("AI win!");
+            winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
+            this->close();
+            return;
+        }
     }
 }
 
 
 void playingField::on_field1_3_clicked()
 {
+    counterOfPushedBtn++;
     resultOfCheckBusy=Player::isBusy(1,3);
     if(resultOfCheckBusy)  QMessageBox::about(this, "Вибачте, але Ви вибрали зайняте поле", "Будь ласка виберіть не зайняте поле");
     else{
@@ -172,18 +174,6 @@ void playingField::on_field1_3_clicked()
             this->close();
             return;
         }
-
-        aiPlayer.aiTurn();
-        resultOfCheckWin=Game::checkWin(&aiPlayer);
-        if(resultOfCheckWin)
-        {
-            winDrawWind->setLabelText("AI win!");
-            winDrawWind->exec();
-            Game::initializationBoard();
-            counterOfPushedBtn=0;
-            this->close();
-            return;
-        }
         if(counterOfPushedBtn==9)
         {
             resultOfCheckDraw=Game::checkDraw(&humanPlayer,&aiPlayer);
@@ -197,12 +187,24 @@ void playingField::on_field1_3_clicked()
                 return;
             }
         }
+        aiPlayer.aiTurn();
         counterOfPushedBtn++;
+        resultOfCheckWin=Game::checkWin(&aiPlayer);
+        if(resultOfCheckWin)
+        {
+            winDrawWind->setLabelText("AI win!");
+            winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
+            this->close();
+            return;
+        }
     }
 }
 
 void playingField::on_field2_1_clicked()
 {
+    counterOfPushedBtn++;
     resultOfCheckBusy=Player::isBusy(2,1);
     if(resultOfCheckBusy)  QMessageBox::about(this, "Вибачте, але Ви вибрали зайняте поле", "Будь ласка виберіть не зайняте поле");
     else{
@@ -221,18 +223,6 @@ void playingField::on_field2_1_clicked()
             this->close();
             return;
         }
-
-        aiPlayer.aiTurn();
-        resultOfCheckWin=Game::checkWin(&aiPlayer);
-        if(resultOfCheckWin)
-        {
-            winDrawWind->setLabelText("AI win!");
-            winDrawWind->exec();
-            Game::initializationBoard();
-            counterOfPushedBtn=0;
-            this->close();
-            return;
-        }
         if(counterOfPushedBtn==9)
         {
             resultOfCheckDraw=Game::checkDraw(&humanPlayer,&aiPlayer);
@@ -246,13 +236,25 @@ void playingField::on_field2_1_clicked()
                 return;
             }
         }
+        aiPlayer.aiTurn();
         counterOfPushedBtn++;
+        resultOfCheckWin=Game::checkWin(&aiPlayer);
+        if(resultOfCheckWin)
+        {
+            winDrawWind->setLabelText("AI win!");
+            winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
+            this->close();
+            return;
+        }
     }
 }
 
 
 void playingField::on_field2_2_clicked()
 {
+    counterOfPushedBtn++;
     resultOfCheckBusy=Player::isBusy(2,2);
     if(resultOfCheckBusy)  QMessageBox::about(this, "Вибачте, але Ви вибрали зайняте поле", "Будь ласка виберіть не зайняте поле");
     else{
@@ -271,18 +273,6 @@ void playingField::on_field2_2_clicked()
             this->close();
             return;
         }
-
-        aiPlayer.aiTurn();
-        resultOfCheckWin=Game::checkWin(&aiPlayer);
-        if(resultOfCheckWin)
-        {
-            winDrawWind->setLabelText("AI win!");
-            winDrawWind->exec();
-            Game::initializationBoard();
-            counterOfPushedBtn=0;
-            this->close();
-            return;
-        }
         if(counterOfPushedBtn==9)
         {
             resultOfCheckDraw=Game::checkDraw(&humanPlayer,&aiPlayer);
@@ -296,13 +286,25 @@ void playingField::on_field2_2_clicked()
                 return;
             }
         }
+        aiPlayer.aiTurn();
         counterOfPushedBtn++;
+        resultOfCheckWin=Game::checkWin(&aiPlayer);
+        if(resultOfCheckWin)
+        {
+            winDrawWind->setLabelText("AI win!");
+            winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
+            this->close();
+            return;
+        }
     }
 }
 
 
 void playingField::on_field2_3_clicked()
 {
+    counterOfPushedBtn++;
     resultOfCheckBusy=Player::isBusy(2,3);
     if(resultOfCheckBusy)  QMessageBox::about(this, "Вибачте, але Ви вибрали зайняте поле", "Будь ласка виберіть не зайняте поле");
     else{
@@ -321,18 +323,6 @@ void playingField::on_field2_3_clicked()
             this->close();
             return;
         }
-
-        aiPlayer.aiTurn();
-        resultOfCheckWin=Game::checkWin(&aiPlayer);
-        if(resultOfCheckWin)
-        {
-            winDrawWind->setLabelText("AI win!");
-            winDrawWind->exec();
-            Game::initializationBoard();
-            counterOfPushedBtn=0;
-            this->close();
-            return;
-        }
         if(counterOfPushedBtn==9)
         {
             resultOfCheckDraw=Game::checkDraw(&humanPlayer,&aiPlayer);
@@ -346,12 +336,24 @@ void playingField::on_field2_3_clicked()
                 return;
             }
         }
+        aiPlayer.aiTurn();
         counterOfPushedBtn++;
+        resultOfCheckWin=Game::checkWin(&aiPlayer);
+        if(resultOfCheckWin)
+        {
+            winDrawWind->setLabelText("AI win!");
+            winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
+            this->close();
+            return;
+        }
     }
 }
 
 void playingField::on_field3_1_clicked()
 {
+    counterOfPushedBtn++;
     resultOfCheckBusy=Player::isBusy(3,1);
     if(resultOfCheckBusy)  QMessageBox::about(this, "Вибачте, але Ви вибрали зайняте поле", "Будь ласка виберіть не зайняте поле");
     else{
@@ -370,18 +372,6 @@ void playingField::on_field3_1_clicked()
             this->close();
             return;
         }
-
-        aiPlayer.aiTurn();
-        resultOfCheckWin=Game::checkWin(&aiPlayer);
-        if(resultOfCheckWin)
-        {
-            winDrawWind->setLabelText("AI win!");
-            winDrawWind->exec();
-            Game::initializationBoard();
-            counterOfPushedBtn=0;
-            this->close();
-            return;
-        }
         if(counterOfPushedBtn==9)
         {
             resultOfCheckDraw=Game::checkDraw(&humanPlayer,&aiPlayer);
@@ -395,12 +385,26 @@ void playingField::on_field3_1_clicked()
                 return;
             }
         }
+        aiPlayer.aiTurn();
         counterOfPushedBtn++;
+        resultOfCheckWin=Game::checkWin(&aiPlayer);
+        if(resultOfCheckWin)
+        {
+            winDrawWind->setLabelText("AI win!");
+            winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
+            this->close();
+            return;
+        }
+
+
     }
 }
 
 void playingField::on_field3_2_clicked()
 {
+    counterOfPushedBtn++;
     resultOfCheckBusy=Player::isBusy(3,2);
     if(resultOfCheckBusy)  QMessageBox::about(this, "Вибачте, але Ви вибрали зайняте поле", "Будь ласка виберіть не зайняте поле");
     else{
@@ -408,8 +412,9 @@ void playingField::on_field3_2_clicked()
         winDrawWind->setModal(true);
         QChar sign=humanPlayer.getSign();
         humanPlayer.makeTurn(3,2);
+        resultOfCheckWin=Game::checkWin(&humanPlayer);
         ui->field3_2->setText(sign);
-        if(Game::checkWin(&humanPlayer))
+        if(resultOfCheckWin)
         {
             winDrawWind->setLabelText("You win!");
             winDrawWind->exec();
@@ -418,18 +423,6 @@ void playingField::on_field3_2_clicked()
             this->close();
             return;
         }
-
-        aiPlayer.aiTurn();
-        resultOfCheckWin=Game::checkWin(&aiPlayer);
-        if(resultOfCheckWin)
-        {
-            winDrawWind->setLabelText("AI win!");
-            winDrawWind->exec();
-            Game::initializationBoard();
-            counterOfPushedBtn=0;
-            this->close();
-            return;
-        }
         if(counterOfPushedBtn==9)
         {
             resultOfCheckDraw=Game::checkDraw(&humanPlayer,&aiPlayer);
@@ -443,12 +436,26 @@ void playingField::on_field3_2_clicked()
                 return;
             }
         }
+        aiPlayer.aiTurn();
         counterOfPushedBtn++;
+        resultOfCheckWin=Game::checkWin(&aiPlayer);
+        if(resultOfCheckWin)
+        {
+            winDrawWind->setLabelText("AI win!");
+            winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
+            this->close();
+            return;
+        }
+
+
     }
 }
 
 void playingField::on_field3_3_clicked()
 {
+    counterOfPushedBtn++;
     resultOfCheckBusy=Player::isBusy(3,3);
     if(resultOfCheckBusy)  QMessageBox::about(this, "Вибачте, але Ви вибрали зайняте поле", "Будь ласка виберіть не зайняте поле");
     else{
@@ -467,17 +474,6 @@ void playingField::on_field3_3_clicked()
             this->close();
             return;
         }
-
-        aiPlayer.aiTurn();
-        if(Game::checkWin(&aiPlayer))
-        {
-            winDrawWind->setLabelText("AI win!");
-            winDrawWind->exec();
-            Game::initializationBoard();
-            counterOfPushedBtn=0;
-            this->close();
-            return;
-        }
         if(counterOfPushedBtn==9)
         {
             resultOfCheckDraw=Game::checkDraw(&humanPlayer,&aiPlayer);
@@ -491,7 +487,20 @@ void playingField::on_field3_3_clicked()
                 return;
             }
         }
+        aiPlayer.aiTurn();
         counterOfPushedBtn++;
+        resultOfCheckWin=Game::checkWin(&aiPlayer);
+        if(resultOfCheckWin)
+        {
+            winDrawWind->setLabelText("AI win!");
+            winDrawWind->exec();
+            Game::initializationBoard();
+            counterOfPushedBtn=0;
+            this->close();
+            return;
+        }
+
+
     }
 }
 
