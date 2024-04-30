@@ -5,6 +5,7 @@ MainMenu::MainMenu(QWidget *parent)
     , ui(new Ui::MainMenu)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Tic Tac Toe");
 }
 
 MainMenu::~MainMenu()
@@ -16,6 +17,7 @@ void MainMenu::on_newGameBtn_clicked()
 {
     signselection selector;
     selector.exec();
+    this->close();
 }
 
 

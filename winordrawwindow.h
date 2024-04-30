@@ -18,6 +18,8 @@ public:
 private slots:
     void on_returnToMainMenu_clicked();
 
+    void on_closeAllBtn_clicked();
+
 private:
     Ui::winOrDrawWindow *ui;
 };

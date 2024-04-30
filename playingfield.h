@@ -6,7 +6,7 @@
 #include"humanplayer.h"
 #include"aiplayer.h"
 #include"winordrawwindow.h"
-#include<qvector.h>
+#include<QVector.h>
 #include<QPushButton>
 namespace Ui {
 class playingField;

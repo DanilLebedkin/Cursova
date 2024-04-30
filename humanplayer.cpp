@@ -12,7 +12,7 @@ void HumanPlayer::setSign(char _sign)
     this->sign=_sign;
 }
 
-void HumanPlayer::makeTurn(int row,int collumn)
+void HumanPlayer::makeTurn(int row,int column)
 {
-    Game::setBoardCell(row-1,collumn-1,getSign());
+    Game::setBoardCell(row-1,column-1,getSign());
 }

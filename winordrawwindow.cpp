@@ -6,6 +6,7 @@ winOrDrawWindow::winOrDrawWindow(QWidget *parent)
     , ui(new Ui::winOrDrawWindow)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Game result ");
 }
 
 winOrDrawWindow::~winOrDrawWindow()
@@ -18,8 +19,9 @@ void winOrDrawWindow::setLabelText(QString message)
     ui->labelForResultOfGame->setText(message);
 }
 
-void winOrDrawWindow::on_returnToMainMenu_clicked()
+
+void winOrDrawWindow::on_closeAllBtn_clicked()
 {
-    this->close();
+       this->close();
 }
 

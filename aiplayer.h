@@ -8,7 +8,7 @@ class AiPlayer: public Player
 private:
     char sign;
 public:
-    AiPlayer(char sign);
+    AiPlayer(char _sign);
     void setSign(char);
     char getSign() override;
     void makeTurn(int,int) override;

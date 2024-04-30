@@ -41,9 +41,9 @@
      </widget>
     </item>
     <item row="2" column="0">
-     <widget class="QPushButton" name="returnToMainMenu">
+     <widget class="QPushButton" name="closeAllBtn">
       <property name="text">
-       <string>Return to main menu</string>
+       <string>Close the program</string>
       </property>
      </widget>
     </item>

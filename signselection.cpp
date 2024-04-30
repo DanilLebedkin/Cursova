@@ -6,6 +6,7 @@ signselection::signselection(QWidget *parent)
     , ui(new Ui::signselection)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Sign selection");
 }
 
 signselection::~signselection()
@@ -25,7 +26,6 @@ void signselection::on_crossBtn_clicked()
     playField->show();
     this->close();
 }
-
 
 void signselection::on_nullBtn_clicked()
 {

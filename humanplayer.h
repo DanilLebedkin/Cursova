@@ -6,7 +6,7 @@ class HumanPlayer:public Player
 protected:
     char sign;
 public:
-    HumanPlayer(char sign);
+    HumanPlayer(char _sign);
     char getSign()override;
     void setSign(char);
     void makeTurn(int,int)override;
